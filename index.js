@@ -1,8 +1,8 @@
-var readlineSync = require("readline-sync");
+const readlineSync = require("readline-sync");
 
-var score = 0;
+let score = 0;
 
-var userName = readlineSync.question("What is your name? ");
+const userName = readlineSync.question("What is your name? ");
 
 console.log(`Welcome ${userName} let's start game.`);
 
@@ -16,7 +16,7 @@ var highScore = [{
 }];
 
 const play = (question, answer) => {
-  var userAnswer = readlineSync.question(question);
+  const userAnswer = readlineSync.question(question);
 
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     console.log("right");
@@ -29,7 +29,7 @@ const play = (question, answer) => {
   console.log("__________________");
 };
 
-var questions = [{
+const questions = [{
   question: "Where do Rishi live? ",
   answer: "Lucknow"
 },
