@@ -6,7 +6,7 @@ const userName = readlineSync.question("What is your name? ");
 
 console.log(`Welcome ${userName} let's start game.`);
 
-var highScore = [{
+const highScore = [{
   name: "Rishi",
   score: 5
 },
@@ -50,12 +50,12 @@ const questions = [{
   answer: "Shahrukh Khan" 
 }];
 
-for(var i = 0; i<questions.length; i++) {
-  var currentQuestion = questions[i];
+for(let i = 0; i<questions.length; i++) {
+  let currentQuestion = questions[i];
   play(currentQuestion.question, currentQuestion.answer);
 }
 
-for(i=0;i<highScore.length;i++) {
+for(let i=0;i<highScore.length;i++) {
   console.log(highScore[i].name);
   console.log(highScore[i].score);
 }
