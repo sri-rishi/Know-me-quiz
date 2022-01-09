@@ -4,7 +4,7 @@ var score = 0;
 
 var userName = readlineSync.question("What is your name? ");
 
-console.log("Welcome " + userName + ", let's start game.");
+console.log(`Welcome ${userName} let's start game.`);
 
 var highScore = [{
   name: "Rishi",
@@ -15,7 +15,7 @@ var highScore = [{
   score: 4
 }];
 
-function play(question, answer) {
+const play = (question, answer) => {
   var userAnswer = readlineSync.question(question);
 
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
@@ -25,7 +25,7 @@ function play(question, answer) {
     console.log("wrong");
     score = score - 1;
   }
-  console.log("Your current score is " + score + ".");
+  console.log(`Your current score is ${score}.`);
   console.log("__________________");
 };
 
